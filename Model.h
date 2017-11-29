@@ -1,5 +1,5 @@
 /*
- * Directions: 0-up, 1-right, 2-down, 3-left
+ * Directions: 0-down, 1-left, 2-up, 3-right
  */
 
 class Game {
@@ -43,7 +43,7 @@ public:
 		delete[] field;
 	}
 
-	void move_line(int i, int dir);
+	int move_line(int i, int dir);
 
 	int get_cell(int line, int i, int direction);
 	void set_cell(int line, int i, int direction, int value);

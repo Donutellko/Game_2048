@@ -2,6 +2,7 @@
 class Viewer {
 public:
 	static void show_field(int ** field, int size);
+	static void show_field(int ** field, int size, int score);
 
 	static void test(int ** field, int size) {
 		for (int i = 0; i < size; i++) {
