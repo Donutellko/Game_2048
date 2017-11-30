@@ -3,5 +3,5 @@ project(Game_2048)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp Model.cpp Model.h Viewer.cpp Viewer.h)
+set(SOURCE_FILES main.cpp Model.cpp Model.h Viewer.cpp Viewer.h Field.cpp)
 add_executable(Game_2048 ${SOURCE_FILES})

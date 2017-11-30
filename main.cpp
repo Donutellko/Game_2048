@@ -12,6 +12,10 @@ void reset_keypress(void);
 static struct termios stored_settings;
 
 int main() { // программа правильно работает при запуске в терминале, но может и в дебаге.
+
+	std::cout << "Размер поля: ";
+	std::cin >> size;
+
 	set_keypress();
 
 	Game game(size, goal);
