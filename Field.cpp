@@ -13,10 +13,14 @@ public:
 		}
 	}
 
+	Field(int ** field, int size) {
+		this->size = size;
+		this->field = field;
+	}
+
 	int ** get() {
 		return field;
 	}
-
 
 	void set(int i, int j, int direction, int value) {
 		*coord(i, j, direction) = value;
@@ -34,6 +38,10 @@ public:
 		return field[i][j];
 	}
 
+	void add(int i, int j, int value) {
+		field[i][j] += value;
+	}
+
 	int * coord(int i, int j, int direction) {
 		switch (direction) {
 			case 0: return &field[size - j - 1][i];
@@ -47,5 +55,16 @@ public:
 			delete[] field[i];
 		}
 		delete[] field;
+	}
+
+	int ** clone() {
+		int **copy = new int * [size];
+		for (int i = 0; i < size; i++) {
+			copy[i] = new int[size];
+			for (int j = 0; j < size; j++) {
+				copy[i][j] = field[i][j];
+			}
+		}
+		return copy;
 	}
 };

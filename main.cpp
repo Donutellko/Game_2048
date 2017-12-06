@@ -17,8 +17,6 @@ int main() { // программа правильно работает при з
 
 	Game game(size, goal);
 
-	game.begin();
-
 	Viewer().show_field(game.get_field(), game.get_size(), game.get_score());
 
 	int prev_result = -1;
